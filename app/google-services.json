@@ -1,0 +1,86 @@
+{
+  "project_info": {
+    "project_number": "989482237138",
+    "firebase_url": "https://weather-49876.firebaseio.com",
+    "project_id": "weather-49876",
+    "storage_bucket": "weather-49876.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:989482237138:android:1c3e167264e5047b",
+        "android_client_info": {
+          "package_name": "com.education.sirkel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "989482237138-rdiube8v4jhtltriq9nmliv34f33gi2h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDL5p_R4dzI2-qBexoxeVtjxwMsPkmJzL4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:989482237138:android:8b478831855117cc",
+        "android_client_info": {
+          "package_name": "com.education.sirkel.weatherapps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "989482237138-9ks6gfr4a0f0b2ilfnuo02ac1cji2psl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.education.sirkel.weatherapps",
+            "certificate_hash": "03db140a94cc1c7225d6e7584afa295394a1ba20"
+          }
+        },
+        {
+          "client_id": "989482237138-rdiube8v4jhtltriq9nmliv34f33gi2h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDL5p_R4dzI2-qBexoxeVtjxwMsPkmJzL4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "989482237138-rdiube8v4jhtltriq9nmliv34f33gi2h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
