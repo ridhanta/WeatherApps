@@ -144,7 +144,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int i = 1 + 1;
         int ii = 2 + 2;
         int iii = 3 + 3 + 3;
-        int iV = 4 + 4;
+        int iV = 4 + 4 + 4;
+        boolean a = true;
 
         String test = "Test";
     }
