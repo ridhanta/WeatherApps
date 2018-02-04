@@ -18,12 +18,14 @@ public class SplashScreen extends AppCompatActivity {
                 .withFullScreen()
                 .withTargetActivity(MainActivity.class)
                 .withSplashTimeOut(4000)
-                .withBackgroundResource(android.R.color.holo_red_light)
-                .withHeaderText("Header")
-                .withFooterText("Copyright 2016")
-                .withBeforeLogoText("My cool company")
-                .withLogo(R.drawable.common_google_signin_btn_icon_dark)
-                .withAfterLogoText("Some more details")
+                .withBackgroundResource(android.R.color.holo_blue_dark)
+                .withHeaderText("")
+                .withFooterText("Copyright 2018")
+                .withBeforeLogoText("")
+                .withLogo(R.drawable.logoww
+
+                )
+                .withAfterLogoText("")
                 .create();
 
         setContentView(easySplashScreenView);
