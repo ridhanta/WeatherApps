@@ -41,8 +41,15 @@ public class WeatherActivity extends AppCompatActivity {
     private TextView kotaCuaca;
     private TextView mainCuaca;
     private TextView deskCuaca;
+    private TextView temp;
+    private TextView temp1;
     private TextView tempMin;
     private TextView tempMax;
+    private TextView pressure;
+    private TextView humidity;
+    private TextView windSpd;
+    private TextView seaLevel;
+    private TextView groundLevel;
     private RequestQueue queue;
     private ImageView iconCuaca;
     private Toolbar toolbar;
@@ -64,10 +71,20 @@ public class WeatherActivity extends AppCompatActivity {
         kotaCuaca = (TextView) findViewById(R.id.kotaWeather);
         mainCuaca = (TextView) findViewById(R.id.mainWeather);
         deskCuaca = (TextView) findViewById(R.id.descWeather);
+        temp = (TextView) findViewById(R.id.tempWeather);
+        temp1 = (TextView) findViewById(R.id.tempWeather1);
         tempMin = (TextView) findViewById(R.id.tempMinWeather);
         tempMax = (TextView) findViewById(R.id.tempMaxWeather);
+        pressure = (TextView) findViewById(R.id.pressure);
+        humidity = (TextView) findViewById(R.id.humidity);
+        windSpd = (TextView) findViewById(R.id.windSpeed);
+        seaLevel = (TextView) findViewById(R.id.seaLevel);
+        groundLevel = (TextView) findViewById(R.id.groundLevel);
+
+
         iconCuaca = (ImageView) findViewById(R.id.imageWeather);
         goToList = (ImageButton) findViewById(R.id.imageButton);
+
 
         toolbar = (Toolbar) findViewById(R.id.toolbarId);
         setSupportActionBar(toolbar);
@@ -182,8 +199,14 @@ public class WeatherActivity extends AppCompatActivity {
                         JSONObject list0 = list.getJSONObject(0);
                         JSONObject main = list0.getJSONObject("main");
 
-                        tempMin.setText(main.getString("temp_min"));
-                        tempMax.setText(main.getString("temp_max"));
+                        temp.setText(main.getString("temp"));
+                        temp1.setText(main.getString("temp"));
+                        tempMin.setText("Min " + main.getString("temp_min"));
+                        tempMax.setText("Max " + main.getString("temp_max"));
+                        pressure.setText(main.getString("pressure") + " mb");
+                        seaLevel.setText(main.getString("sea_level"));
+                        groundLevel.setText(main.getString("grnd_level"));
+                        humidity.setText(main.getString("humidity") + " %");
 
                         JSONObject city = response.getJSONObject("city");
                         kotaCuaca.setText(city.getString("name"));
@@ -193,6 +216,10 @@ public class WeatherActivity extends AppCompatActivity {
 
                         mainCuaca.setText(weather0.getString("main"));
                         deskCuaca.setText(weather0.getString("description"));
+
+                        JSONObject wind = list0.getJSONObject("wind");
+                        windSpd.setText(wind.getString("speed") + " mph");
+
 
                         //image
 

@@ -108,7 +108,7 @@ public class RegisterClass extends AppCompatActivity {
                                 //Go to WeatherActivity
 
                                 Intent intent = new Intent(RegisterClass.this, WeatherActivity.class);
-                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK |Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 startActivity(intent);
                             }
                             else {
