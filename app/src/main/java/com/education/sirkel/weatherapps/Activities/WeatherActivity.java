@@ -36,6 +36,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Date;
+
 public class WeatherActivity extends AppCompatActivity {
 
     private TextView kotaCuaca;
@@ -50,6 +52,7 @@ public class WeatherActivity extends AppCompatActivity {
     private TextView windSpd;
     private TextView seaLevel;
     private TextView groundLevel;
+    private TextView dateWeather;
     private RequestQueue queue;
     private ImageView iconCuaca;
     private Toolbar toolbar;
@@ -80,6 +83,7 @@ public class WeatherActivity extends AppCompatActivity {
         windSpd = (TextView) findViewById(R.id.windSpeed);
         seaLevel = (TextView) findViewById(R.id.seaLevel);
         groundLevel = (TextView) findViewById(R.id.groundLevel);
+        dateWeather = (TextView) findViewById(R.id.date);
 
 
         iconCuaca = (ImageView) findViewById(R.id.imageWeather);
@@ -112,6 +116,7 @@ public class WeatherActivity extends AppCompatActivity {
         queue = Volley.newRequestQueue(this);
 
         getWeather("7035024");
+        setDateWeather();
 
         goToList.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -247,6 +252,16 @@ public class WeatherActivity extends AppCompatActivity {
         });
         queue.add(jsonObjectRequest);
 
+    }
+
+    private void setDateWeather(){
+
+        String timeStamp = String.
+                valueOf(java.lang.System.currentTimeMillis());
+        java.text.DateFormat dateFormat = java.text.DateFormat.getDateInstance();
+
+        String formattedDate = dateFormat.format(new Date(Long.valueOf(timeStamp)).getTime());
+        dateWeather.setText(formattedDate);
     }
 
 
